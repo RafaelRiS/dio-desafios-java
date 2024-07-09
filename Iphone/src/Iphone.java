@@ -3,10 +3,10 @@ public class Iphone {
     private AparelhoTelefonico telefone;
     private NavegadorInternet navegador;
 
-    public Iphone() {
-        this.reprodutor = new ReprodutorMusical();
-        this.telefone = new AparelhoTelefonico();
-        this.navegador = new NavegadorInternet();
+    public Iphone(ReprodutorMusical reprodutor, AparelhoTelefonico telefone, NavegadorInternet navegador) {
+        this.reprodutor = reprodutor;
+        this.telefone = telefone;
+        this.navegador = navegador;
     }
 
     // Métodos de acesso aos componentes do iPhone
@@ -23,16 +23,21 @@ public class Iphone {
     }
 
     public static void main(String[] args) {
-        Iphone meuiPhone = new Iphone();
 
-        // Exemplo de uso das funcionalidades
-        meuiPhone.getReprodutor().selecionarMusica("Nome da Música");
+        ReprodutorMusical meuReprodutor = new ReprodutorMusicalImpl();
+        AparelhoTelefonico meuTelefone = new AparelhoTelefonicoImpl();
+        NavegadorInternet meuNavegador = new NavegadorInternetImpl();
+
+        Iphone meuiPhone = new Iphone(meuReprodutor, meuTelefone, meuNavegador);
+
+        // Requisitando funcionalidades
+        meuiPhone.getReprodutor().selecionarMusica("Coldabank - Heart Strings (The Writers Block Remix)");
         meuiPhone.getReprodutor().tocar();
 
-        meuiPhone.getTelefone().ligar("123456789");
+        meuiPhone.getTelefone().ligar("4002-8922");
         meuiPhone.getTelefone().atender();
 
-        meuiPhone.getNavegador().exibirPagina("https://www.exemplo.com");
+        meuiPhone.getNavegador().exibirPagina("www.linkedin.com/in/rafaelribeiroti");
         meuiPhone.getNavegador().adicionarNovaAba();
     }
 }

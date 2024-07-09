@@ -1,0 +1,17 @@
+public class AparelhoTelefonicoImpl implements AparelhoTelefonico {
+    @Override
+    public void ligar(String numero) {
+        System.out.println("Ligando no numero: " + numero);
+    }
+
+    @Override
+    public void atender() {
+        System.out.println("Atendendo chamada");
+    }
+
+    @Override
+    public void iniciarCorreioVoz() {
+        System.out.println("Iniciando correio de voz");
+    }
+}
+
