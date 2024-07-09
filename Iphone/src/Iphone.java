@@ -34,7 +34,7 @@ public class Iphone {
         meuiPhone.getReprodutor().selecionarMusica("Coldabank - Heart Strings (The Writers Block Remix)");
         meuiPhone.getReprodutor().tocar();
 
-        meuiPhone.getTelefone().ligar("4002-8922");
+        meuiPhone.getTelefone().ligar("2335-0729");
         meuiPhone.getTelefone().atender();
 
         meuiPhone.getNavegador().exibirPagina("www.linkedin.com/in/rafaelribeiroti");
