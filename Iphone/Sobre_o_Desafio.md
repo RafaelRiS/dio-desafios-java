@@ -22,5 +22,5 @@ Neste desafio, foi feita a modelagem e diagramação com a representação em UM
 2. Implementar as classes e interfaces correspondentes em Java (Opcional).
 
 ### Diagrama UML
-![[iPhone.png]]
+![Diagrama](Imagens/iPhone.png)
 
