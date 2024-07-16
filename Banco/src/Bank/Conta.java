@@ -1,5 +1,8 @@
 package Bank;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 public abstract class Conta implements IConta{
 
 	private static final int AGENCIA_PADRAO = 0;
@@ -46,7 +49,12 @@ public abstract class Conta implements IConta{
 		return saldo;
 	}
 	
+	LocalTime horaAtualizada = LocalTime.now();
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+	String hora = horaAtualizada.format(formatter);
+	
 	protected void imprimirInfosComuns() {
+		System.out.println("Hora: " + hora);
 		System.out.println(String.format("Titular: %s", this.cliente.getNome()));
 		System.out.println(String.format("Agencia: %d", this.agencia));
 		System.out.println(String.format("Numero: %d", this.numero));
