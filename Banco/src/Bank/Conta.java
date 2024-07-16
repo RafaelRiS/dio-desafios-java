@@ -49,9 +49,9 @@ public abstract class Conta implements IConta{
 		return saldo;
 	}
 	
-	LocalTime horaAtualizada = LocalTime.now();
-	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-	String hora = horaAtualizada.format(formatter);
+	protected LocalTime horaAtualizada = LocalTime.now();
+	protected DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+	protected String hora = horaAtualizada.format(formatter);
 	
 	protected void imprimirInfosComuns() {
 		System.out.println("Hora: " + hora);
